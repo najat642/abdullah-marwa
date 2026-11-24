@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="theme-color" content="#f8ece8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دعوة زفاف عبدالله ومروة</title>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:title" content="دعوة زفاف عبدالله ومروة">
+<meta property="og:description" content="يسعدنا دعوتكم لحضور حفل زفافنا يوم السبت 8 شعبان 1448 هـ">
+<meta property="og:image" content="https://najat642.github.io/abdullah-marwa/assets/preview.jpg">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="600">
+<meta property="og:url" content="https://najat642.github.io/abdullah-marwa/">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Reem+Kufi:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* ===== الألوان: عدّلها من هنا فقط ===== */
+  --page:#f8ece8;            /* خلفية خارج الدعوة */
+  --ink:#74474c;             /* لون النص الأساسي */
+  --gold:#cf8f84;            /* ذهبي وردي: الحدود والنقاط */
+  --accent:#b8546a;          /* وردي غامق: العناوين والأزرار */
+  --rose-1:#a9605a;          /* تدرج الخط المعدني - الأغمق */
+  --rose-2:#e0a091;          /* تدرج الخط المعدني - الأفتح */
+  --glass:rgba(255,247,244,.8);
+  /* ===== الصور ===== */
+  --coverimg:url(assets/cover.jpg);--finalimg:url(assets/final.jpg);--duabg:url(assets/dua_bg.jpg);--bgimg:url(assets/background.jpg)
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--page:#2a1c20}}
+:root[data-theme="dark"]{--page:#2a1c20}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;overflow:hidden}
+body{display:grid;place-items:center;background:var(--page);font-family:'Amiri','Traditional Arabic',serif;color:var(--ink);-webkit-tap-highlight-color:transparent}
+.stage{position:relative;height:100dvh;width:min(100vw,calc(100dvh*.5625));container-type:size;overflow:hidden;background:#f8ece8 var(--bgimg) center/cover no-repeat;box-shadow:0 20px 70px rgba(120,60,70,.28)}
+.frame{position:absolute;inset:0;--u:min(1cqw,.5625cqh)}
+.gold{text-shadow:none!important;filter:drop-shadow(0 1px 1px rgba(255,240,235,.8));background:linear-gradient(135deg,var(--rose-1),var(--rose-2) 50%,var(--rose-1));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+/* cover */
+.cover{position:absolute;inset:0;z-index:20;direction:ltr}
+.half{position:absolute;top:0;bottom:0;width:50%;overflow:hidden;transition:transform 1.3s cubic-bezier(.7,0,.2,1)}
+.half.l{left:0}.half.r{right:0}
+.half i{position:absolute;top:0;bottom:0;width:200%;background:#f4e8de var(--coverimg) center/cover no-repeat}
+.half.l i{left:0}.half.r i{right:0}
+.cover.open .l{transform:translateX(-103%)}.cover.open .r{transform:translateX(103%)}
+.cover.gone{display:none}
+.seal{position:absolute;left:50%;top:51.4%;width:calc(.5625cqh*28);aspect-ratio:1;transform:translate(-50%,-50%);border:0;border-radius:50%;background:transparent;cursor:pointer;z-index:3;padding:0}
+.seal::before,.seal::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid rgba(255,244,230,.9);animation:ring 2.4s ease-out infinite}
+.seal::after{animation-delay:1.2s}
+@keyframes ring{from{transform:scale(.9);opacity:.95}to{transform:scale(1.55);opacity:0}}
+.tap{position:absolute;left:50%;top:62.5%;transform:translateX(-50%);z-index:3;border:1px solid var(--gold);background:var(--glass);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:var(--ink);font-family:'Reem Kufi','Amiri',sans-serif;font-weight:600;font-size:calc(var(--u)*4.8);padding:calc(var(--u)*2) calc(var(--u)*7);border-radius:99px;cursor:pointer;box-shadow:0 6px 18px rgba(150,80,90,.25);animation:float 2.4s ease-in-out infinite;white-space:nowrap}
+@keyframes float{50%{transform:translate(-50%,calc(var(--u)*-1.2))}}
+.cover.open .seal,.cover.open .tap{opacity:0;transition:opacity .3s;pointer-events:none}
+/* reveal word */
+.reveal{position:absolute;inset:0;z-index:5;display:grid;place-items:center;opacity:0;transition:opacity .9s;pointer-events:none;background:radial-gradient(circle at 50% 50%,rgba(255,250,245,.8),transparent 62%)}
+.reveal.show{opacity:1}
+.word{font-family:'Aref Ruqaa','Amiri',serif;font-weight:700;font-size:calc(var(--u)*27);line-height:1.35;transform:scale(.85);transition:transform 2.4s ease-out;padding:0 .1em}
+.reveal.show .word{transform:scale(1)}
+/* pages */
+.page{position:relative;flex:none;height:100cqh;scroll-snap-align:start;scroll-snap-stop:always;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:9% 8% 32%;gap:calc(var(--u)*2.2);text-shadow:0 0 calc(var(--u)*2) rgba(255,248,242,.9)}
+.page.active{opacity:1;visibility:visible}
+.rise{opacity:0}
+.page.active .rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*.16s + .25s)}
+@keyframes rise{from{opacity:0;transform:translateY(calc(var(--u)*3))}to{opacity:1;transform:none}}
+.dua{font-family:'Aref Ruqaa',serif;font-weight:700;font-size:calc(var(--u)*6.2);line-height:1.7;margin:0}
+.orn{display:flex;align-items:center;gap:calc(var(--u)*2);width:60%}
+.orn::before,.orn::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.orn::after{transform:scaleX(-1)}
+.orn b{width:calc(var(--u)*1.8);height:calc(var(--u)*1.8);background:var(--gold);transform:rotate(45deg)}
+.poem{width:76%;display:flex;flex-direction:column;gap:calc(var(--u)*.2)}
+.poem p{margin:0;font-size:calc(var(--u)*4.7);line-height:1.35;font-weight:700}
+.poem .r{align-self:flex-start}.poem .l{align-self:flex-end}
+.tash{margin:0;font-family:'Aref Ruqaa','Amiri',serif;color:var(--accent);font-size:calc(var(--u)*5.4);font-weight:700;line-height:1.6}
+.names{margin:0;font-family:'Aref Ruqaa',serif;font-weight:700;font-size:calc(var(--u)*9);line-height:1.35}
+.names small{display:block;font-size:.55em;line-height:1}
+.lead{margin:0;font-family:'Reem Kufi','Amiri',sans-serif;font-weight:600;font-size:calc(var(--u)*5);line-height:1.5}
+.lbl{margin:0;font-size:calc(var(--u)*4.4);font-weight:700;line-height:1.4}
+.big{margin:0;font-family:'Aref Ruqaa',serif;font-weight:700;font-size:calc(var(--u)*10);line-height:1.25}
+.sub{margin:0;font-size:calc(var(--u)*4.1);line-height:1.4;font-weight:700}
+.day{margin:0;font-family:'Aref Ruqaa',serif;font-weight:700;font-size:calc(var(--u)*8.5);line-height:1.25}
+.date{display:flex;align-items:center;justify-content:center;gap:calc(var(--u)*3);padding:calc(var(--u)*2) calc(var(--u)*4);border:1px solid var(--gold);border-radius:calc(var(--u)*3);background:var(--glass);font-weight:700;font-size:calc(var(--u)*4.6);text-shadow:none;white-space:nowrap}
+.date span{width:1px;align-self:stretch;background:var(--gold)}
+/* nav */
+.nav{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(var(--u)*3 + env(safe-area-inset-bottom,0px));z-index:15;display:none;align-items:center;gap:calc(var(--u)*3);padding:calc(var(--u)*1.4) calc(var(--u)*2.4);border-radius:99px;border:1px solid var(--gold);background:var(--glass);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 6px 18px rgba(150,80,90,.22)}
+.nav.show{display:flex;animation:rise .8s both}
+.nav button{width:calc(var(--u)*8);height:calc(var(--u)*8);border-radius:50%;border:0;background:transparent;color:var(--ink);cursor:pointer;display:grid;place-items:center;padding:0}
+.nav button svg{width:60%;height:60%}
+.nav button:disabled{opacity:.25;cursor:default}
+.dots{display:flex;gap:calc(var(--u)*2)}
+.dots i{width:calc(var(--u)*2);height:calc(var(--u)*2);border-radius:50%;background:var(--gold);opacity:.35;transition:all .4s}
+.dots i.on{opacity:1;width:calc(var(--u)*5);border-radius:99px}
+.music{position:absolute;top:calc(var(--u)*3 + env(safe-area-inset-top,0px));left:calc(var(--u)*3);z-index:25;width:calc(var(--u)*9.5);height:calc(var(--u)*9.5);border-radius:50%;border:1px solid var(--gold);background:var(--glass);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:var(--ink);display:none;place-items:center;padding:0;cursor:pointer;box-shadow:0 6px 18px rgba(150,80,90,.22)}
+.music.show{display:grid;animation:rise .8s both}
+.music svg{width:55%;height:55%}
+.music .off{display:none}.music.muted .on{display:none}.music.muted .off{display:block}
+.acc{color:var(--accent)}
+.dimg{width:90%;max-height:76%;object-fit:contain;filter:drop-shadow(0 2px 4px rgba(170,90,100,.3))}
+.logo{width:calc(var(--u)*13);height:calc(var(--u)*13);object-fit:contain}
+.wm{position:absolute;left:50%;top:40%;width:calc(var(--u)*85);transform:translate(-50%,-50%);opacity:.2;pointer-events:none}
+.pn{margin:0;font-weight:700;font-size:calc(var(--u)*6.4);line-height:1.5}
+.btn{display:inline-block;text-decoration:none;color:var(--ink);font-family:'Reem Kufi','Amiri',sans-serif;font-weight:600;font-size:calc(var(--u)*4.2);padding:calc(var(--u)*1.8) calc(var(--u)*5);border:1px solid var(--gold);border-radius:99px;background:var(--glass);text-shadow:none;box-shadow:0 5px 14px rgba(150,80,90,.2)}
+.rules{list-style:none;margin:0;padding:0;font-weight:700;font-size:calc(var(--u)*4.3);line-height:1.7}
+.cd{display:flex;gap:calc(var(--u)*2.5);direction:rtl}
+.cd div{min-width:calc(var(--u)*17);padding:calc(var(--u)*2) 0;border:1px solid var(--gold);border-radius:calc(var(--u)*3);background:var(--glass);text-shadow:none}
+.cd b{display:block;font-family:'Reem Kufi',sans-serif;font-size:calc(var(--u)*8);line-height:1.2;color:var(--accent)}
+.cd small{font-size:calc(var(--u)*3.6);font-weight:700}
+.scroll{position:absolute;inset:0;z-index:10;overflow-y:auto;scroll-snap-type:y mandatory;scrollbar-width:none;opacity:0;visibility:hidden;transition:opacity .9s,visibility .9s}
+.scroll::-webkit-scrollbar{display:none}.scroll.on{opacity:1;visibility:visible}
+.nav{left:auto;right:calc(var(--u)*2.5);top:50%;bottom:auto;transform:translateY(-50%);flex-direction:column;padding:0;border:0;background:none;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+.nav.show{animation:none}.dots{flex-direction:column}.dots i.on{width:calc(var(--u)*2);height:calc(var(--u)*5)}
+.hint{position:absolute;left:50%;bottom:calc(var(--u)*3 + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:15;display:none;font-family:'Reem Kufi',sans-serif;font-weight:600;font-size:calc(var(--u)*3.8);color:var(--ink);padding:calc(var(--u)*1.4) calc(var(--u)*4);border:1px solid var(--gold);border-radius:99px;background:var(--glass);animation:float 2.2s ease-in-out infinite;pointer-events:none}
+.hint.show{display:block}.hint.hide{display:none}
+.fld{width:84%;padding:calc(var(--u)*2) calc(var(--u)*3);border:1px solid var(--gold);border-radius:99px;background:var(--glass);font:inherit;font-size:max(16px,calc(var(--u)*4.6));text-align:center;color:var(--ink);text-shadow:none;outline:0}
+.seg{display:flex;gap:calc(var(--u)*2);width:92%}
+.seg button{flex:1;padding:calc(var(--u)*2) calc(var(--u)*1);border-radius:99px;border:1px solid var(--gold);background:var(--glass);color:var(--ink);font:inherit;font-weight:700;font-size:calc(var(--u)*4);cursor:pointer;text-shadow:none}
+.seg button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.gst{font-weight:700;font-size:calc(var(--u)*4.4)}
+.gst select{font:inherit;font-size:max(16px,calc(var(--u)*4.4));padding:calc(var(--u)*.8) calc(var(--u)*3);border-radius:99px;border:1px solid var(--gold);background:var(--glass);color:var(--ink);margin-inline-start:calc(var(--u)*2)}
+button.btn{cursor:pointer;font-family:'Reem Kufi','Amiri',sans-serif}
+.page.khasa{align-items:stretch}
+.kh,.kh2{margin:0;font-family:'Aref Ruqaa',serif;font-weight:700;font-size:calc(var(--u)*17);line-height:1.1;color:var(--accent);text-shadow:0 2px 3px rgba(236,160,170,.5)}
+.page.khasa{gap:0}
+.kh{align-self:flex-start;margin-inline-start:calc(var(--u)*22)}.kh2{align-self:flex-end;margin-inline-end:calc(var(--u)*22)}
+.dimg.dt{width:94%}
+.page.inv{padding:5% 6% 33%}
+.pair{display:flex;align-items:center;justify-content:center;gap:calc(var(--u)*2.5)}
+.pair .pn{font-size:calc(var(--u)*5.8)}
+.drop{height:calc(var(--u)*9);width:auto}
+.couple{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:calc(var(--u)*1.5);width:100%}
+.nm{display:block;width:62%;height:auto;margin:calc(var(--u)*.5) auto calc(var(--u)*1);filter:drop-shadow(0 2px 3px rgba(170,90,100,.25))}
+.couple p{margin:0}.couple .big{font-size:calc(var(--u)*9.5)}.couple .sub{font-size:calc(var(--u)*3.1);line-height:1.5;white-space:nowrap}
+.page.final{background:var(--finalimg) center/cover no-repeat;padding:0}
+.inr,.inl{opacity:0;filter:blur(8px)}
+.inr{transform:translateX(calc(var(--u)*40))}.inl{transform:translateX(calc(var(--u)*-40))}
+.page.active .inr,.page.active .inl{animation:slin 1.5s cubic-bezier(.2,.8,.2,1) var(--d) forwards}
+@keyframes slin{to{opacity:1;transform:none;filter:blur(0)}}
+.page.dua{justify-content:flex-start;padding-top:19cqh;gap:calc(var(--u)*9)}
+.wipe{clip-path:inset(0 0 0 100%)}
+.page.active .wipe{animation:wipe 2.4s cubic-bezier(.4,0,.2,1) .3s forwards}
+@keyframes wipe{to{clip-path:inset(0 0 0 0)}}
+.logo2{width:calc(var(--u)*50);height:auto;opacity:0;filter:drop-shadow(0 2px 3px rgba(150,80,80,.25))}
+.page.active .logo2{animation:pop 1.6s cubic-bezier(.2,.7,.2,1) 1.4s forwards}
+@keyframes pop{from{opacity:0;transform:scale(.7) rotate(-10deg)}to{opacity:1;transform:none}}
+.scroll{overflow:hidden!important;touch-action:none;scroll-snap-type:none}
+.track{will-change:transform;transition:transform .85s cubic-bezier(.65,0,.25,1)}
+.hint{pointer-events:auto;cursor:pointer;border:1px solid var(--gold)}
+.nav{pointer-events:auto}
+.dots i{cursor:pointer;box-sizing:content-box;border:calc(var(--u)*1.4) solid transparent;background-clip:padding-box}
+.rsvp{display:flex;flex-direction:column;gap:calc(var(--u)*3);width:72%;margin-top:calc(var(--u)*2)}
+.rsvp .btn{text-align:center;font-size:calc(var(--u)*5);padding:calc(var(--u)*2.6) calc(var(--u)*3)}
+.btn.yes{background:var(--accent);color:#fff;border-color:var(--accent)}
+.page.final{position:relative}
+.wish{color:var(--accent);text-shadow:0 1px 2px rgba(255,240,235,.9);position:absolute;top:calc(8cqh - .7em);left:0;right:0;margin:0;text-align:center;font-family:var(--wishfont,'Aref Ruqaa'),'Amiri',serif;font-weight:700;font-size:calc(var(--u)*11.5);line-height:1.4}
+.hrt{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.beat{transform-box:fill-box;transform-origin:center;animation:beat 1.8s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}14%{transform:scale(1.14)}28%{transform:scale(1)}42%{transform:scale(1.1)}56%{transform:scale(1)}}
+.wait{margin:0;font-family:'Aref Ruqaa',serif;font-weight:700;font-size:calc(var(--u)*11);line-height:1.5}
+.hdiv{width:62%;height:auto}
+.page.dua{background:var(--duabg) center/cover no-repeat}
+/* شريط التنقل السفلي (يظهر من الصفحة الثانية) */
+.bar{position:absolute;left:calc(var(--u)*4);right:calc(var(--u)*4);bottom:calc(var(--u)*3 + env(safe-area-inset-bottom,0px));z-index:16;height:calc(var(--u)*16);display:grid;grid-template-columns:1fr 1fr calc(var(--u)*18) 1fr 1fr;align-items:center;border-radius:calc(var(--u)*8);background:var(--glass);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid var(--gold);box-shadow:0 8px 24px rgba(150,80,90,.25);opacity:0;visibility:hidden;transform:translateY(calc(var(--u)*6));transition:opacity .6s,transform .6s,visibility .6s}
+.bar.show{opacity:1;visibility:visible;transform:none}
+.bi{display:flex;flex-direction:column;align-items:center;gap:calc(var(--u)*.8);color:var(--ink);text-decoration:none;background:none;border:0;padding:0;cursor:pointer;font-family:'Amiri','Traditional Arabic',serif;font-weight:700;font-size:calc(var(--u)*3.3);line-height:1.2}
+.bi svg{width:calc(var(--u)*6);height:calc(var(--u)*6);color:var(--accent)}
+.bi .sl{display:none}.bi.muted .sl{display:block}
+.bheart{justify-self:center;width:calc(var(--u)*16);height:calc(var(--u)*16);margin-top:calc(var(--u)*-6);border-radius:50%;border:calc(var(--u)*.9) solid #fff7f3;background:linear-gradient(135deg,var(--rose-1),var(--rose-2) 55%,var(--rose-1));box-shadow:0 6px 16px rgba(150,80,90,.4);display:grid;place-items:center;cursor:pointer;padding:0;color:#fff}
+.bheart svg{width:48%;height:48%;transform-box:fill-box;transform-origin:center;animation:beat 1.8s ease-in-out infinite}
+.music.hid{display:none!important}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important;transition-duration:.01s!important}}
+</style>
+</head>
+<body>
+<main class="stage"><div class="frame">
+
+  <div class="reveal" id="reveal"><div class="word gold">دعوة<br>خاصة</div></div>
+
+  <div class="scroll" id="scroll"><div class="track" id="track">
+  <section class="page khasa"><p class="kh inr" style="--d:.3s">دعوة</p><p class="kh2 inl" style="--d:1s">خاصة</p></section>
+
+  <section class="page dua"><img class="dimg dt wipe" src="assets/duatext.webp" alt="بارك الله لهما وبارك عليهما وجمع بينهما في خير"><img class="logo2 pop" src="assets/logo2.webp" alt=""></section>
+
+  <section class="page inv">
+    <div class="poem">
+      <p class="r rise" style="--i:0">مرحبا بالحب وأحلى لياليه</p>
+      <p class="l rise" style="--i:1">يا مرحبا بفرحة ننتظرها</p>
+      <p class="r rise" style="--i:2">قربت ليالي السعد وأحلى أمانيه</p>
+      <p class="l rise" style="--i:3">والقلب من شوق اللقا ينتظرها</p>
+    </div>
+    <p class="tash rise" style="--i:4">بكل الحب والفرح والسرور تتشرف</p>
+    <div class="pair rise" style="--i:5"><p class="pn gold">فاطمة سعدو</p><img class="drop" src="assets/drop.webp" alt=""><p class="pn gold">آمنة شمسي</p></div>
+    <p class="lead acc rise" style="--i:6">بدعوتكم لحضور حفل زفاف</p>
+    <div class="couple rise" style="--i:7">
+      <div><p class="lbl">ابننا المهندس</p><img class="nm" src="assets/name_abdullah.webp" alt="عبدالله"><p class="sub">نجل المرحوم: حسين سعدو</p></div>
+      <img class="drop" src="assets/drop.webp" alt="">
+      <div><p class="lbl">ابنتنا</p><img class="nm" src="assets/name_marwa.webp" alt="مروة"><p class="sub">كريمة المرحوم: محمود شمسي</p></div>
+    </div>
+  </section>
+
+  <section class="page">
+    <p class="lbl rise" style="--i:0">وذلك بمشيئة الله تعالى يوم</p>
+    <p class="day gold rise" style="--i:1">السبت</p>
+    <p class="pn rise" style="--i:2">16 يناير 2027 م</p>
+    <p class="pn rise" style="--i:3">8 شعبان 1448 هـ</p>
+    <p class="pn acc rise" style="--i:4">الساعة 9:30 مساءً</p>
+    <a class="btn rise" style="--i:5" id="cal" target="_blank" rel="noopener">احفظ الموعد في التقويم</a>
+    <ul class="rules rise" style="--i:6"><li>• يمنع اصطحاب الأطفال</li><li>• يمنع دخول الجوالات ذات الكاميرا</li></ul>
+  </section>
+
+  <section class="page">
+    <p class="lead acc rise" style="--i:0">العدّ التنازلي</p>
+    <div class="cd rise" style="--i:1"><div><b id="cd-d">0</b><small>يوم</small></div><div><b id="cd-h">0</b><small>ساعة</small></div><div><b id="cd-m">0</b><small>دقيقة</small></div><div><b id="cd-s">0</b><small>ثانية</small></div></div>
+    <div class="orn rise" style="--i:2"><b></b></div>
+    <p class="lead acc rise" style="--i:3">موقع الحفل</p>
+    <p class="big gold rise" style="--i:4;font-size:calc(var(--u)*8)">قاعة ليليا 2</p>
+    <p class="sub rise" style="--i:5">قاعة ليليا | <bdi dir="ltr">Lily Hall</bdi><br>البغدادية الغربية، جدة <bdi dir="ltr">22234</bdi></p>
+    <a class="btn rise" style="--i:6" id="map" target="_blank" rel="noopener">فتح الموقع في خرائط Google</a>
+  </section>
+
+  <section class="page">
+    <p class="lead acc rise" style="--i:0">تأكيد الحضور</p>
+    <p class="sub rise" style="--i:1">يسعدنا تأكيد حضوركم عبر واتساب</p>
+    <div class="rsvp rise" style="--i:2">
+      <a class="btn yes" href="https://wa.me/966537789391?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%A4%D9%83%D8%AF%20%D8%AD%D8%B6%D9%88%D8%B1%D9%8A%20%D9%84%D8%AD%D9%81%D9%84%20%D8%B2%D9%81%D8%A7%D9%81%20%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%84%D9%87%20%D9%88%D9%85%D8%B1%D9%88%D8%A9.%20%D8%B4%D9%83%D8%B1%D9%8B%D8%A7%20%D9%84%D8%AF%D8%B9%D9%88%D8%AA%D9%83%D9%85%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%D8%A9." target="_blank" rel="noopener">أؤكد حضوري</a>
+      <a class="btn" href="https://wa.me/966537789391?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B9%D8%AA%D8%B0%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%AD%D8%B6%D9%88%D8%B1%20%D9%84%D8%AD%D9%81%D9%84%20%D8%B2%D9%81%D8%A7%D9%81%20%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%84%D9%87%20%D9%88%D9%85%D8%B1%D9%88%D8%A9%D8%8C%20%D8%A3%D8%B3%D8%B9%D8%AF%D9%83%D9%85%20%D8%A7%D9%84%D9%84%D9%87%20%D9%88%D8%A8%D8%A7%D8%B1%D9%83%20%D9%84%D9%83%D9%85." target="_blank" rel="noopener">أعتذر عن الحضور</a>
+    </div>
+  </section>
+
+  <section class="page final" aria-label="عبدالله ومروة - 8 / 8 / 1448 هـ"><p class="wish gold rise" style="--i:0">ننتظركم بكل حب</p></section>
+</div></div>
+
+  <nav class="nav" id="nav"><div class="dots"></div></nav>
+  <button class="hint" id="hint" aria-label="الصفحة التالية">التالي ⌄</button>
+
+  <button class="music" id="music" aria-label="تشغيل أو إيقاف الموسيقى">
+    <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H3v6h3l5 4V5z"/><path d="M15.5 8.5a5 5 0 010 7M18.5 5.5a9 9 0 010 13"/></svg>
+    <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H3v6h3l5 4V5z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>
+  </button>
+  <audio id="song" loop preload="auto" src="assets/music.mp3"></audio>
+
+  <nav class="bar" id="bar" aria-label="شريط التنقل">
+    <a class="bi" id="bcall" href="https://wa.me/966537789391" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>تواصل</a>
+    <button class="bi" id="bmusic" type="button" aria-label="تشغيل أو إيقاف الموسيقى"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/><path class="sl" d="M3 3l18 18"/></svg><span id="bmlbl">موسيقى</span></button>
+    <button class="bheart" id="bheart" type="button" aria-label="الصفحة التالية"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 00-7.8 7.8l1.1 1.1L12 21.2l7.7-7.7 1.1-1.1a5.5 5.5 0 000-7.8z"/></svg></button>
+    <a class="bi" id="bmap" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>الموقع</a>
+    <a class="bi" id="bconf" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>تأكيد الحضور</a>
+  </nav>
+
+  <div class="cover" id="cover">
+    <div class="half l"><i></i></div>
+    <div class="half r"><i></i></div>
+    <button class="seal" id="seal" aria-label="افتح الدعوة"></button>
+    <button class="tap" id="tap">اضغط هنا</button>
+  </div>
+
+</div></main>
+<script>
+(function(){
+  var MAPS_URL='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent('قاعة ليليا Lily Hall البغدادية الغربية جدة');
+  var $=function(id){return document.getElementById(id)};
+  var cover=$('cover'),reveal=$('reveal'),nav=$('nav'),sc=$('scroll'),hint=$('hint'),song=$('song'),music=$('music');
+  var pages=[].slice.call(document.querySelectorAll('.page')),dotsEl=nav.querySelector('.dots');
+  pages.forEach(function(){dotsEl.appendChild(document.createElement('i'))});
+  var dots=dotsEl.children,opened=false,bar=$('bar');
+  var bm=$('bmusic'),bml=$('bmlbl');
+  function setMuted(m){music.classList.toggle('muted',m);bm.classList.toggle('muted',m);bml.textContent=m?'متوقفة':'موسيقى'}
+  music.addEventListener('click',function(){
+    if(song.paused){song.play().then(function(){setMuted(false)}).catch(function(){})}else{song.pause();setMuted(true)}
+  });
+  document.addEventListener('visibilitychange',function(){
+    if(!document.hidden&&opened&&!music.classList.contains('muted')&&song.paused){song.play().catch(function(){})}
+  });
+  var track=$('track'),cur=0,H=0,lock=0;
+  function size(){H=sc.clientHeight;pages.forEach(function(p){p.style.height=H+'px'});track.style.transform='translateY(-'+cur*H+'px)'}
+  function go(i){
+    if(i<0||i>=pages.length)return;
+    cur=i;track.style.transform='translateY(-'+i*H+'px)';
+    pages[i].classList.add('active');
+    [].forEach.call(dots,function(d,k){d.classList.toggle('on',k===i)});
+    hint.classList.toggle('hide',i>=1||i===pages.length-1);
+    bar.classList.toggle('show',i>=1);music.classList.toggle('hid',i>=1);
+  }
+  window.addEventListener('resize',size);
+  [].forEach.call(dots,function(d,k){d.addEventListener('click',function(){go(k)})});
+  hint.addEventListener('click',function(){go(cur+1)});
+  sc.addEventListener('wheel',function(e){
+    if(!opened||Math.abs(e.deltaY)<12)return;e.preventDefault();
+    var n=Date.now();if(n-lock<850)return;lock=n;go(cur+(e.deltaY>0?1:-1));
+  },{passive:false});
+  document.addEventListener('keydown',function(e){
+    if(!opened||/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;
+    if(e.key==='ArrowDown'||e.key==='PageDown'||e.key===' ')go(cur+1);
+    if(e.key==='ArrowUp'||e.key==='PageUp')go(cur-1);
+  });
+  var y0=null;
+  sc.addEventListener('touchstart',function(e){y0=e.touches[0].clientY},{passive:true});
+  sc.addEventListener('touchend',function(e){
+    if(y0===null)return;var dy=e.changedTouches[0].clientY-y0;y0=null;
+    if(Math.abs(dy)>40)go(cur+(dy<0?1:-1));
+  },{passive:true});
+  function open(){
+    if(opened)return;opened=true;
+    cover.classList.add('open');sc.classList.add('on');nav.classList.add('show');hint.classList.add('show');size();go(0);
+    song.volume=.8;song.play().then(function(){setMuted(false)}).catch(function(){setMuted(true)});
+    music.classList.add('show');
+    setTimeout(function(){cover.classList.add('gone')},1400);
+    
+  }
+  $('seal').addEventListener('click',open);$('tap').addEventListener('click',open);
+  
+  $('map').href=MAPS_URL;$('bmap').href=MAPS_URL;
+  $('bconf').href=document.querySelector('.btn.yes').href;
+  bm.addEventListener('click',function(){music.click()});
+  $('bheart').addEventListener('click',function(){go(cur+1<pages.length?cur+1:1)});
+  $('cal').href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent('حفل زفاف عبدالله ومروة')+'&dates=20270116T183000Z/20270116T213000Z&location='+encodeURIComponent('قاعة ليليا 2، البغدادية الغربية، جدة');
+  var T=new Date('2027-01-16T21:30:00+03:00').getTime(),cd={d:'cd-d',h:'cd-h',m:'cd-m',s:'cd-s'};
+  function tick(){var r=Math.max(0,Math.floor((T-Date.now())/1000));
+    var v={d:Math.floor(r/86400),h:Math.floor(r%86400/3600),m:Math.floor(r%3600/60),s:r%60};
+    for(var k in cd)$(cd[k]).textContent=v[k];}
+  tick();setInterval(tick,1000);
+  })();
+</script>
+</body>
+</html>
